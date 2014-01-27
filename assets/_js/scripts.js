@@ -1,47 +1,18 @@
-jQuery(document).ready(function(e)
- {
-  var Solution =  
-  { 
-    // FUNÇÃO QUE INICIA TODA MANIPULAÇÃO DO DOM 
-    init_: function(ret)
-    { 
-      jQuery('nav ul li a').click(function() 
-      {
-        var pagina = jQuery(this).attr('href');
-        
-
-      });
-    },
-
-     About: function()
-     {
-      
-     },
-
-     Contact: function()
-     {
-      
-     },
-
-     Test: function(debug)
-     {  
-      try
-      { 
-        if(debug==undefined)    throw "VALOR INVÁLIDO !!!";
-        if(debug.search("erro")!=-1) { throw "VALOR INVÁLIDO !!!"; }
-        if(debug.search("error")!=-1) { throw "VALOR INVÁLIDO !!!"; }
-      }
-
-      catch(err)
-      { 
-        console.log(err);
-        alert(err);
-      }
-
-     }
-
-  }
-
-  Solution.init_('Renato');
-
- });
+(function( window, document, undefined ){
+  var obj = function() {
+    return {
+ 
+      init : function() {
+        console.log( this.soma_valor( 3, 5 ) );
+      }, // init
+ 
+ 
+      soma_valor : function( num1, num2 ) {
+        return num1 + num2;
+      } 
+ 
+    }; 
+  }; 
+ 
+  obj().init();
+})( window, document );
