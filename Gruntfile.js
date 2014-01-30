@@ -24,16 +24,13 @@ module.exports = function( grunt ) {
       }
     }, // sass
 
-
+    requirejs: { app: { options: { findNestedDependencies: true, mainConfigFile: 'assets/js/config.js', baseUrl : 'assets/js', name : 'app', out : 'build.js', optimize : 'none', } } },
+    
     modernizr: {
 
-    // [REQUIRED] Path to the build you're using for development.
+
     "devFile" : "lib/modernizr-dev.js",
-
-    // [REQUIRED] Path to save out the built file.
     "outputFile" : "build/modernizr-custom.js",
-
-    // Based on default settings on http://modernizr.com/download/
     "extra" : {
         "shiv" : true,
         "printshiv" : false,
@@ -41,8 +38,6 @@ module.exports = function( grunt ) {
         "mq" : false,
         "cssclasses" : true
     },
-
-    // Based on default settings on http://modernizr.com/download/
     "extensibility" : {
         "addtest" : false,
         "prefixed" : false,
@@ -53,29 +48,14 @@ module.exports = function( grunt ) {
         "prefixes" : false,
         "domprefixes" : false
     },
-
-    // By default, source is uglified before saving
+  
     "uglify" : true,
-
-    // Define any tests you want to implicitly include.
     "tests" : [],
-
-    // By default, this task will crawl your project for references to Modernizr tests.
-    // Set to false to disable.
     "parseFiles" : true,
-
-    // When parseFiles = true, this task will crawl all *.js, *.css, *.scss files, except files that are in node_modules/.
-    // You can override this by defining a "files" array below.
-    // "files" : [],
-
-    // When parseFiles = true, matchCommunityTests = true will attempt to
-    // match user-contributed tests.
     "matchCommunityTests" : false,
-
-    // Have custom Modernizr tests? Add paths to their location here.
     "customTests" : []
     
-    }
+    } 
 
  
   });
@@ -84,7 +64,9 @@ module.exports = function( grunt ) {
  grunt.loadNpmTasks( 'grunt-contrib-uglify' );
  grunt.loadNpmTasks( 'grunt-contrib-sass' );
  grunt.loadNpmTasks("grunt-modernizr");
+ grunt.loadNpmTasks('grunt-contrib-requirejs');
+
   // Tarefas que serão executadas
-  grunt.registerTask( 'default', [ 'uglify', 'sass','modernizr' ] );
+  grunt.registerTask( 'default', [ 'uglify', 'sass','modernizr','requirejs'] );
 
 }
