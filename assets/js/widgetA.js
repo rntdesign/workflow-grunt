@@ -1,3 +1,3 @@
-define(function(){
-	console.log('Loading Widget A.');
+$(document).ready(function() {
+	alert('s');
 });

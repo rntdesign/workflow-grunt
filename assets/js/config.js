@@ -4,7 +4,7 @@
     var config = {
 	    config: {
 	        app: {
-	            widgets: ['jquery-min','widgetA', 'widgetB', 'widgetC']
+	            widgets: ['widgetA', 'widgetB', 'widgetC']
 	        }
 	    }
 	};
