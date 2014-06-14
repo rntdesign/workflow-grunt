@@ -26,6 +26,15 @@ module.exports = function( grunt ) {
 
     requirejs: { app: { options: { findNestedDependencies: true, mainConfigFile: 'assets/js/config.js', baseUrl : 'assets/js', name : 'app', out : 'build.js', optimize : 'none', } } },
     
+    watch: {
+    css: {
+    files: '**/*.sass',
+    tasks: ['sass'],
+    options: {
+      livereload: true,
+    },
+    },
+    },
     modernizr: {
 
 
@@ -48,6 +57,7 @@ module.exports = function( grunt ) {
         "prefixes" : false,
         "domprefixes" : false
     },
+
   
     "uglify" : true,
     "tests" : [],
@@ -61,12 +71,13 @@ module.exports = function( grunt ) {
   });
 
   // Plugins do Grunt
+ grunt.loadNpmTasks('grunt-contrib-watch');
  grunt.loadNpmTasks( 'grunt-contrib-uglify' );
  grunt.loadNpmTasks( 'grunt-contrib-sass' );
  grunt.loadNpmTasks("grunt-modernizr");
  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   // Tarefas que serão executadas
-  grunt.registerTask( 'default', [ 'uglify', 'sass','modernizr','requirejs'] );
+  grunt.registerTask( 'default', [ 'uglify', 'sass','modernizr','requirejs','watch'] );
 
 }
