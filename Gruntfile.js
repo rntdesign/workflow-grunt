@@ -33,22 +33,6 @@ module.exports = function( grunt ) {
     }, 
 
 
-    /* ITS SASS */
-
-    /*
-    sass : {
-      dist : {
-        options : { style : 'compressed' },
-        files : {
-          'assets/css/style.css' : 'assets/_sass/style.sass'
-        }
-      }
-    }, // sass
-
-    */
-
-
-
     requirejs: { app: { options: { findNestedDependencies: true, mainConfigFile: 'assets/js/config.js', baseUrl : 'assets/js', name : 'app', out : 'build.js', optimize : 'none', } } },
     
     watch: {
