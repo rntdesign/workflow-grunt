@@ -5,6 +5,7 @@
   "homepage": "http://www.yoursite.com.br",
   "devDependencies": {
     "grunt": "~0.4.2",
+    "grunt-contrib-compass": "^1.0.1",
     "grunt-contrib-requirejs": "~0.4.1",
     "grunt-contrib-sass": "~0.6.0",
     "grunt-contrib-uglify": "~0.2.7",

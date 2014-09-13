@@ -15,6 +15,27 @@ module.exports = function( grunt ) {
       }
     }, // uglify
 
+
+    compass: { 
+    dist: {
+      options: {
+        sassDir: 'assets/_sass',
+        cssDir: 'assets/css',
+        environment: 'production'
+      }
+    },
+    dev: {                    // Another target
+      options: {
+        sassDir: 'assets/sass',
+        cssDir: 'assets/css'
+      }
+    }
+    }, 
+
+
+    /* ITS SASS */
+
+    /*
     sass : {
       dist : {
         options : { style : 'compressed' },
@@ -24,17 +45,23 @@ module.exports = function( grunt ) {
       }
     }, // sass
 
+    */
+
+
+
     requirejs: { app: { options: { findNestedDependencies: true, mainConfigFile: 'assets/js/config.js', baseUrl : 'assets/js', name : 'app', out : 'build.js', optimize : 'none', } } },
     
     watch: {
-    css: {
-    files: '**/*.sass',
-    tasks: ['sass'],
-    options: {
-      livereload: true,
+      css: {
+        files: 'assets/_sass/**/*' ,
+        tasks: [ 'compass' ]
+      },
+      js: {
+        files: 'assets/_js/**/*',
+        tasks: [ 'uglify' ]
+      }
     },
-    },
-    },
+
     modernizr: {
 
 
@@ -71,13 +98,13 @@ module.exports = function( grunt ) {
   });
 
   // Plugins do Grunt
+ grunt.loadNpmTasks('grunt-contrib-compass');
  grunt.loadNpmTasks('grunt-contrib-watch');
  grunt.loadNpmTasks( 'grunt-contrib-uglify' );
- grunt.loadNpmTasks( 'grunt-contrib-sass' );
  grunt.loadNpmTasks("grunt-modernizr");
  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   // Tarefas que serão executadas
-  grunt.registerTask( 'default', [ 'uglify', 'sass','modernizr','requirejs','watch'] );
+  grunt.registerTask( 'default', [ 'modernizr','requirejs','watch'] );
 
 }
