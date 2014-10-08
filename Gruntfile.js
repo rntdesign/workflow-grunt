@@ -19,6 +19,7 @@ module.exports = function( grunt ) {
     compass: { 
     dist: {
       options: {
+
         sassDir: 'assets/_sass',
         cssDir: 'assets/css',
         environment: 'production'
@@ -27,7 +28,8 @@ module.exports = function( grunt ) {
     dev: {                    // Another target
       options: {
         sassDir: 'assets/sass',
-        cssDir: 'assets/css'
+        cssDir: 'assets/css',
+        config_file: 'config.rb',
       }
     }
     }, 
