@@ -9,7 +9,7 @@
  
  
       soma_valor : function( num1, num2 ) {
-        return num1 + num2+2;
+        return num1 + num2+5;
       } 
  
     }; 
