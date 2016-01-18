@@ -3,6 +3,11 @@ $fontmenu: #000;
 $hovermenu: #c0c0c0;
 $font-stack:    Helvetica, sans-serif;
 
+$imagens-spacing: 2px
+$imagens-sprite-dimensions: true
+@import "imagens/*.png"
+
+
 nav {
   ul {
     margin: 0;
