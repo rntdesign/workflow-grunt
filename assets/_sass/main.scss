@@ -1,6 +1,13 @@
 $colormenu: #fff;
 $fontmenu: #000;
 $hovermenu: #c0c0c0;
+$font-stack:    Helvetica, sans-serif;
+
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
 
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
