@@ -1,0 +1,28 @@
+$colormenu: #fff;
+$fontmenu: #000;
+$hovermenu: #c0c0c0;
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.menu{
+	background-color:$colormenu;
+	ul {
+		margin: 0px;
+		padding: 0px;
+		li{
+			list-style: none;
+			a {
+				color: $fontmenu;
+				&:hover {
+					color: $hovermenu;
+				}
+			}
+		}
+	}
+}
+.box { @include border-radius(10px); }
