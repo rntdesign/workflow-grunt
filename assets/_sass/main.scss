@@ -2,11 +2,8 @@ $colormenu: #fff;
 $fontmenu: #000;
 $hovermenu: #c0c0c0;
 $font-stack:    Helvetica, sans-serif;
-
-$imagens-spacing: 2px
-$imagens-sprite-dimensions: true
-@import "imagens/*.png"
-
+$primary-color: '000';
+$imagens-spacing: 2px;
 
 nav {
   ul {
