@@ -16,13 +16,17 @@ module.exports = function( grunt ) {
 
 
     compass: { 
-    dist: {
-      options: {
+      dist: {
+        options: {
 
-        sassDir: 'assets/_sass',
-        cssDir: 'assets/css',
-        environment: 'production'
-      }
+          sassDir: 'assets/_sass',
+          cssDir: 'assets/css',
+          environment: 'production'
+          ,imagesDir: "assets/img/"
+          ,generatedImagesDir: "assets/img/sprites/"
+          ,generatedImagesPath: "assets/img/sprites/"
+          ,httpGeneratedImagesPath: "../img/sprites/"
+        }
     },
     dev: {                    // Another target
       options: {
