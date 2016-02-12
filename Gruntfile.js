@@ -28,6 +28,8 @@ module.exports = function( grunt ) {
       options: {
         sassDir: 'assets/sass',
         cssDir: 'assets/css',
+          config: 'config.rb',
+        force: true
       }
     }
     }, 

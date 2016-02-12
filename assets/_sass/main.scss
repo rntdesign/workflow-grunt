@@ -3,9 +3,6 @@ $fontmenu: #000;
 $hovermenu: #c0c0c0;
 $font-stack:    Helvetica, sans-serif;
 
-$imagens-spacing: 2px
-$imagens-sprite-dimensions: true
-@import "imagens/*.png"
 
 
 nav {
@@ -17,7 +14,6 @@ nav {
 }  
 body {
   font: 100% $font-stack;
-  color: $primary-color;
 }
 
 @mixin border-radius($radius) {
