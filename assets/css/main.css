@@ -1,1 +1,72 @@
-nav ul{margin:0;padding:0;list-style:none}body{font:100% Helvetica,sans-serif}.menu{background-color:#fff}.menu ul{margin:0px;padding:0px}.menu ul li{list-style:none}.menu ul li a{color:#000}.menu ul li a:hover{color:silver}.box{-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;border-radius:10px}
+/* line 56, ../../assets/img/sprites/*.png */
+.sprites-sprite, .sprites-other-service-1, .sprites-other-service-2 {
+  background-image: url('../img/../../assets/img/sprites-s43acd7fbb3.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprites-other-service-1 {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprites-other-service-2 {
+  background-position: 0 -104px;
+}
+
+/*
+
+images/my-icons/new.png
+images/my-icons/edit.png
+images/my-icons/save.png
+images/my-icons/delete.png
+
+
+.actions {
+  .new    { @include my-icons-sprite(new);    }
+  .edit   { @include my-icons-sprite(edit);   }
+  .save   { @include my-icons-sprite(save);   }
+  .delete { @include my-icons-sprite(delete); }
+}
+*/
+/* line 29, ../_sass/main.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 37, ../_sass/main.scss */
+body {
+  font: 100% Helvetica, sans-serif;
+}
+
+/* line 48, ../_sass/main.scss */
+.menu {
+  background-color: #fff;
+}
+/* line 50, ../_sass/main.scss */
+.menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+/* line 53, ../_sass/main.scss */
+.menu ul li {
+  list-style: none;
+}
+/* line 55, ../_sass/main.scss */
+.menu ul li a {
+  color: #000;
+}
+/* line 57, ../_sass/main.scss */
+.menu ul li a:hover {
+  color: #c0c0c0;
+}
+
+/* line 64, ../_sass/main.scss */
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}

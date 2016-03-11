@@ -3,6 +3,26 @@ $fontmenu: #000;
 $hovermenu: #c0c0c0;
 $font-stack:    Helvetica, sans-serif;
 @import "compass/utilities/sprites";
+@import "../../assets/img/sprites/*.png";
+@include all-sprites-sprites;
+
+
+
+/*
+
+images/my-icons/new.png
+images/my-icons/edit.png
+images/my-icons/save.png
+images/my-icons/delete.png
+
+
+.actions {
+  .new    { @include my-icons-sprite(new);    }
+  .edit   { @include my-icons-sprite(edit);   }
+  .save   { @include my-icons-sprite(save);   }
+  .delete { @include my-icons-sprite(delete); }
+}
+*/
 
 
 nav {
@@ -12,6 +32,8 @@ nav {
     list-style: none;
   }
 }  
+
+
 body {
   font: 100% $font-stack;
 }

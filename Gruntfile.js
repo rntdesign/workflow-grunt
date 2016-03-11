@@ -18,29 +18,23 @@ module.exports = function( grunt ) {
     compass: { 
       dist: {
         options: {
-
           sassDir: 'assets/_sass',
           cssDir: 'assets/css',
           environment: 'production'
-          ,imagesDir: "assets/img/"
-          ,generatedImagesDir: "assets/img/sprites/"
-          ,generatedImagesPath: "assets/img/sprites/"
-          ,httpGeneratedImagesPath: "../img/sprites/"
         }
     },
     dev: {                    // Another target
       options: {
-        sassDir: 'assets/sass',
+        sassDir: 'assets/_sass',
         cssDir: 'assets/css',
-          config: 'config.rb',
-        force: true
+        imagesDir: 'assets/img/',
+        outputStyle: 'expanded',
+        environment: 'development',
+        noLineComments: false
       }
     }
     }, 
 
-
-    requirejs: { app: { options: { findNestedDependencies: true, mainConfigFile: 'assets/js/config.js', baseUrl : 'assets/js', name : 'app', out : 'build.js', optimize : 'none', } } },
-    
     watch: {
       compass: {
        files: ['**/*.{scss,sass}'],
