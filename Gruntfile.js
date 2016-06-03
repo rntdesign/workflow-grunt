@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
         sassDir: 'assets/_sass',
         cssDir: 'assets/css',
         imagesDir: 'assets/img/',
-        outputStyle: 'expanded',
+        outputStyle: 'compressed',
         environment: 'development',
         noLineComments: false
       }
