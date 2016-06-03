@@ -6,4 +6,4 @@ sass_dir = 'assets/_sass'
 images_dir = 'assets/img'
 relative_assets = true
 chunky_png_options = :best_compression
-output_style = :expanded
+output_style = :compressed
