@@ -6,7 +6,9 @@ $font-stack:    Helvetica, sans-serif;
 @import "../../assets/img/sprites/*.png";
 @include all-sprites-sprites;
 
-
+@mixin flex($target, $context){
+width: (($target/$context)*100%);
+}
 
 /*
 
