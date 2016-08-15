@@ -10,6 +10,11 @@ $font-stack:    Helvetica, sans-serif;
 width: (($target/$context)*100%);
 }
 
+img {   
+  max-width: 100%;   
+  height: auto;  
+}  
+
 /*
 
 images/my-icons/new.png
