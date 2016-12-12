@@ -43,7 +43,14 @@ module.exports = function( grunt ) {
       js: {
         files: 'assets/_js/**/*',
         tasks: [ 'uglify' ]
+      },
+      options: {
+      livereload: {
+           host: 'localhost',
+           port: 9000
+          }
       }
+
     }
  
   });

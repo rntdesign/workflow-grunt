@@ -1,1 +1,1 @@
-!function(){var obj=function(){return{init:function(){console.log(this.soma_valor(3,5)),alert("test")},soma_valor:function(num1,num2){return num1+num2+5}}};obj().init()}(window,document);
+!function(window,document,undefined){var obj=function(){return{init:function(){console.log(this.soma_valor(3,5))},soma_valor:function(num1,num2){return 1==num1?num2:num==undefined&&0==num?obj.init():(documentgetElementById("error").onSubmit=function(){console.log("entrou")},document.getElementById("error").onSubmit=function(){console.log("test")},void 0)}}};obj().init()}(window,document);
