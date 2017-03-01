@@ -20,11 +20,11 @@ module.exports = function( grunt ) {
       separator: ';',
       },
       dist: {
-        src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
-        dest: 'dist/built.js',
+        src: ['lib/jquery-min.js', 'assets/js/bootstrap.min', 'assets/js/main.js'],
+        dest: 'assets/js/bundle.js',
       },
     },
-    
+
     compass: { 
       dist: {
         options: {
@@ -72,6 +72,6 @@ module.exports = function( grunt ) {
  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Tarefas que serão executadas
-  grunt.registerTask( 'default', [ 'compass','watch','uglify']);
+  grunt.registerTask( 'default', ['concat','compass','watch','uglify']);
 
 }
