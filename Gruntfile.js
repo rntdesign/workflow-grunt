@@ -15,6 +15,16 @@ module.exports = function( grunt ) {
     }, // uglify
 
 
+    concat: {
+    options: {
+      separator: ';',
+      },
+      dist: {
+        src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
+        dest: 'dist/built.js',
+      },
+    },
+    
     compass: { 
       dist: {
         options: {
@@ -59,6 +69,7 @@ module.exports = function( grunt ) {
  grunt.loadNpmTasks('grunt-contrib-compass');
  grunt.loadNpmTasks('grunt-contrib-watch');
  grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+ grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Tarefas que serão executadas
   grunt.registerTask( 'default', [ 'compass','watch','uglify']);
