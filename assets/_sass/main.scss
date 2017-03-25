@@ -1,79 +1,39 @@
-$colormenu: #fff;
-$fontmenu: #000;
-$hovermenu: #c0c0c0;
-$font-stack:    Helvetica, sans-serif;
+@charset 'UTF-8';
 @import "compass/utilities/sprites";
 @import "../../assets/img/sprites/*.png";
 @include all-sprites-sprites;
+//@include sprites-sprite(example);
 
-@mixin flex($target, $context){
-width: (($target/$context)*100%);
-}
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
 
-img {   
-  max-width: 100%;   
-  height: auto;  
-} 
+// 2. Vendors
+@import
+  'vendor/normalize';
 
-.responsive-text {
- -ms-word-break: break-all;
-     word-break: break-all;
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
 
-     // Non standard for webkit
-     word-break: break-word;
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
 
--webkit-hyphens: auto;
-   -moz-hyphens: auto;
-        hyphens: auto;
-}
+// 5. Components
+@import
+  'components/button';
 
-* {
-    box-sizing: border-box;
-}
+// 6. Page-specific styles
+@import
+  'pages/home';
 
-
-body {
-	background-color: #000;
-	width: 100%;
-	height: auto;
-	background-size: cover; 
-}
-
-
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-}  
-
-
-body {
-  font: 100% $font-stack;
-}
-
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	border-radius: $radius;
-}
-
-.menu{
-	background-color:$colormenu;
-	ul {
-		margin: 0px;
-		padding: 0px;
-		li{
-			list-style: none;
-			a {
-				color: $fontmenu;
-				&:hover {
-					color: $hovermenu;
-				}
-			}
-		}
-	}
-}
-.box { @include border-radius(10px); }
+// 7. Themes
+@import
+  'themes/default';
